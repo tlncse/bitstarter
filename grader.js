@@ -73,7 +73,7 @@ if(require.main == module) {
         .parse(process.argv);
 
     if (program.url) {
-        console.log("Using URL: " + program.url);
+        // console.log("Using URL: " + program.url);
 
         rest.get(program.url).on('complete', function(result) {
             var tmpfilename = "tmp_" + new Date().getTime();
@@ -91,7 +91,7 @@ if(require.main == module) {
             fs.unlink(tmpfilename);
         });
     } else {
-        console.log("Using File: " + program.file);
+        // console.log("Using File: " + program.file);
 
         htmlfile = program.file;
 
